@@ -7,15 +7,26 @@
 
 # example use in code
 ```
-testUrl := "https://www.example.com?p=3678"
-normalizerData, err := st-normalizer.NewNormalizer(testUrl)
-if err != nil {
-  fmt.Println(err.Error())
-  panic(err)
+
+package main
+
+import (
+  "fmt"
+  "github.com/sharethis-github/st-normalizer"
+)
+
+func main() {
+  testUrl := "https://www.example.com?p=3678"
+  normalizerData, err := normalizer.NewNormalizer(testUrl)
+  if err != nil {
+    fmt.Println(err.Error())
+    panic(err)
+  }
+
+  normalizerData.Normalize()
+  fmt.Println(normalizerData)
 }
 
-normalizerData.Normalize()
-fmt.Println(normalizerData)
 ```
 
 # output of above example code
