@@ -31,11 +31,11 @@ func main() {
 
 # output of above example code
 ```
-raw_url: https://www.example.com?p=3678
-protocol: https
-raw_query_params: p=3678
-canonical_url: https://www.example.com
-canonical_url_hash: e149be135a8b6803951f75776d589aaa
-url_identifier: www.example.com?p=3678
-url_identifier_hash: 600ef3b84b8ebc3db724c3d3e1aff542
+RawUrl: https://www.example.com?p=3678
+Protocol: https
+RawQueryParams: p=3678
+CanonicalUrl: https://www.example.com
+CanonicalUrlHash: e149be135a8b6803951f75776d589aaa
+UrlIdentifier: www.example.com?p=3678
+UrlIdentifierHash: 600ef3b84b8ebc3db724c3d3e1aff54
 ```

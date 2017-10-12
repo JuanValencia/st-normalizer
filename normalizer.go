@@ -79,13 +79,13 @@ func NewNormalizer(rawUrl string) (*Normalizer, error) {
 }
 
 func (n *Normalizer) String() string {
-	rawUrl := fmt.Sprintf("raw_url: %s \n", n.RawUrl)
-	protocol := fmt.Sprintf("protocol: %s \n", n.Protocol)
-	rawQueryParams := fmt.Sprintf("raw_query_params: %s \n", n.RawQueryParams)
-	canonicalUrl := fmt.Sprintf("canonical_url: %s \n", n.CanonicalUrl)
-	canonicalUrlHash := fmt.Sprintf("canonical_url_hash: %s \n", n.CanonicalUrlHash)
-	UrlIdentifier := fmt.Sprintf("url_identifier: %s \n", n.UrlIdentifier)
-	UrlIdentifierHash := fmt.Sprintf("url_identifier_hash: %s \n", n.UrlIdentifierHash)
+	rawUrl := fmt.Sprintf("RawUrl: %s \n", n.RawUrl)
+	protocol := fmt.Sprintf("Protocol: %s \n", n.Protocol)
+	rawQueryParams := fmt.Sprintf("RawQueryParams: %s \n", n.RawQueryParams)
+	canonicalUrl := fmt.Sprintf("CanonicalUrl: %s \n", n.CanonicalUrl)
+	canonicalUrlHash := fmt.Sprintf("CanonicalUrlHash: %s \n", n.CanonicalUrlHash)
+	UrlIdentifier := fmt.Sprintf("UrlIdentifier: %s \n", n.UrlIdentifier)
+	UrlIdentifierHash := fmt.Sprintf("UrlIdentifierHash: %s \n", n.UrlIdentifierHash)
 	return (rawUrl + protocol + rawQueryParams + canonicalUrl + canonicalUrlHash +
 		UrlIdentifier + UrlIdentifierHash)
 }
