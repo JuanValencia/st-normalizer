@@ -6,6 +6,16 @@ import (
 	"testing"
 )
 
+func TestNormalizerString(t *testing.T) {
+	testUrl := "https://www.example.com?p=3678"
+	n, err := NewNormalizer(testUrl)
+	if err != nil {
+		t.Error("Error: Normalizer `NewNormalizer` test failed!")
+	}
+	n.Normalize()
+	fmt.Println(n)
+}
+
 func TestNormalizerSetScheme(t *testing.T) {
 	testSchemes := map[string]string{
 		"http":  "HTTP://www.Example.com/",

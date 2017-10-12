@@ -79,10 +79,15 @@ func NewNormalizer(rawUrl string) (*Normalizer, error) {
 }
 
 func (n *Normalizer) String() string {
-	return fmt.Sprintf(
-		"rawUrl: %s, normalizedUrl: %s, protocol: %s, urlhash: %s, transformedUrl %s",
-		n.RawUrl, n.UrlIdentifier, n.Protocol,
-		n.UrlIdentifierHash, n.transformedUrl.String())
+	rawUrl := fmt.Sprintf("raw_url: %s \n", n.RawUrl)
+	protocol := fmt.Sprintf("protocol: %s \n", n.Protocol)
+	rawQueryParams := fmt.Sprintf("raw_query_params: %s \n", n.RawQueryParams)
+	canonicalUrl := fmt.Sprintf("canonical_url: %s \n", n.CanonicalUrl)
+	canonicalUrlHash := fmt.Sprintf("canonical_url_hash: %s \n", n.CanonicalUrlHash)
+	UrlIdentifier := fmt.Sprintf("url_identifier: %s \n", n.UrlIdentifier)
+	UrlIdentifierHash := fmt.Sprintf("url_identifier_hash: %s \n", n.UrlIdentifierHash)
+	return (rawUrl + protocol + rawQueryParams + canonicalUrl + canonicalUrlHash +
+		UrlIdentifier + UrlIdentifierHash)
 }
 
 func (n *Normalizer) removeTrailingSlash() {
